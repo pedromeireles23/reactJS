@@ -64,8 +64,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={workSans.variable}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={workSans.variable} suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }
